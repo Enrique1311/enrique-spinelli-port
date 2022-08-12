@@ -1,0 +1,174 @@
+.profile-container {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--light);
+    padding-top: 75px;
+    width: 100%;
+}
+.profile-picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 0 0 var(--light);
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+}
+.profile-picture-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    background-image: url("../../assets/home-img.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: pictureEfect 3s infinite;
+    box-shadow: 0 0 20px 0 var(--light);
+}
+@keyframes pictureEfect {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px 0 var(--light);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px 0 var(--light);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px 0 var(--light);
+    }
+}
+.cssLogo {
+    width: 8rem;
+    animation: cssLogoEfect 3s infinite;
+    position: absolute;
+    opacity: 0;
+}
+@keyframes cssLogoEfect {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {        
+        transform: scale(1) translateY(-110%);
+        opacity: 0;
+    }
+}
+.javascriptLogo {
+    width: 5rem;
+    position: absolute;
+    animation: javascriptLogoEfect 3s infinite;
+    animation-delay: .5s;
+    opacity: 0;
+}
+@keyframes javascriptLogoEfect {    
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {        
+        transform: scale(1) translateX(95%) translateY(-30%);
+        opacity: 0;
+    }
+}
+.reactLogo {
+    width: 5rem;
+    position: absolute;
+    animation: reactLogoEfect 3s infinite;
+    animation-delay: 1s;
+    opacity: 0;
+}
+@keyframes reactLogoEfect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {        
+        transform: scale(1) translateX(60%) translateY(80%);
+        opacity: 0;
+    }
+}
+.reactNativeLogo {
+    width: 3.5rem;
+    position: absolute;
+    animation: reactNativeLogoEfect 3s infinite;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+@keyframes reactNativeLogoEfect {    
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {        
+        transform: scale(1) translateY(95%) translateX(-80%);
+        opacity: 0;
+    }
+}
+.htmlLogo {
+    width: 5.5rem;
+    position: absolute;
+    animation: htmlLogoEfect 3s infinite;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes htmlLogoEfect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {        
+        transform: scale(1) translateX(-85%) translateY(-30%);
+        opacity: 0;
+    }
+}
+@media screen and (min-width: 768px) {
+    .profile-container {
+        flex-direction: row-reverse;
+        gap: 5rem;
+        padding-top: 2rem;
+    }
+    .profile-picture {
+        margin-bottom: 4rem;
+    }  
+}
+@media screen and (min-width: 950px) {
+    .profile-container {
+        gap: 10rem;
+        padding-top: 4rem;
+    }
+    .profile-picture {
+        width: 16rem;
+        height: 16rem;
+    }
+}
+
+
